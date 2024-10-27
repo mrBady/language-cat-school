@@ -672,6 +672,12 @@ h6 {
   padding-top: 3.125rem;
   padding-bottom: 3.125rem
 }
+.questions__return {
+  margin-top: 1.875rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--bg-accent)
+}
 .questions__subtitle {
   margin-top: 1.875rem;
   color: var(--bg-accent)
