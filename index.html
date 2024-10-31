@@ -6,16 +6,19 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241027123227">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241031204020">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://js.stripe.com/v3/?_v=20241031204020"></script>
 </head>
 
 <body>
 	<div class="wrapper">
+
 		<header class="header">
 			<div class="header__container">
+
 			</div>
 		</header>
 		<main class="page">
@@ -24,15 +27,14 @@
 					<div class="main-section__wrapper-content">
 						<div class="main-section__start start">
 							<div class="start__wrapper">
-								<!-- <div class="start__sub-title">
-										<h3 class="start__date">СТАРТ 14 ЖОВТНЯ!</h3>
-										<p class="start__dectription"></p>
-									</div> -->
-								<h1 class="start__title">Інтенсивний онлайн-курс з доступом на рік</h1>
+								<div>
+									<h1 class="start__title">Інтенсивний онлайн-курс з польської мови </h1>
+									<h2 class="start__subtitle">від Language Cat School</h2>
+								</div>
 								<ul class="start__list">
 									<li class="start__item">9 основних коротких відео уроків</li>
 									<li class="start__item">Підтримку куратора міні-курсу</li>
-									<li class="start__item">бонусні додаткові відео уроки (розбір фраз із фільмів та популярних польських мемівт</li>
+									<li class="start__item">Бонусні додаткові відео уроки (розбір фраз із фільмів та популярних польських мемівт</li>
 									<li class="start__item">Конспекти до кожного уроку </li>
 									<li class="start__item">Конспект з переліком популярних сленгових слів</li>
 									<li class="start__item">Додаткові матеріали з граматикою</li>
@@ -41,25 +43,13 @@
 									<li class="start__item">Тести після кожного вивченого матеріалу</li>
 									<li class="start__item">Чат спілкування з іншими учасниками міні-курсу</li>
 									<li class="start__item">Чат підтримку 24/7</li>
+									<button id="checkout-button" class="price__link-buy">Отримати за 250 гривень</button>
 								</ul>
-								<div class="start__card-wrapper card">
-									<img class="card__image ibg" src="img/image-cat.webp" alt="Image">
-									<div class="card__body">
-										<div class="card__description">Онлайн-школа</div>
-									</div>
-								</div>
 							</div>
-						</div>
-						<div class="main-section__price price">
-							<button class="price__link-buy">ХОЧУ НА КУРС</button>
-							<div class="price__wrapper-price">
-								<span class="price__second">всього 49 злотих</span>
-								<span class="price__main">замість <s>300 злотих</s></span>
-							</div>
+							<img class="start__image ibg" src="img/cat-2.webp" alt="Image">
 						</div>
 					</div>
 
-					<!-- timer  -->
 				</div>
 			</section>
 			<section class="page__target-audience">
@@ -93,44 +83,44 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__will-get">
-				<div class="will-get__container">
-					<h2 class="will-get__title subtitle">Що я отримаю?</h2>
-					<div class="will-get__card-target card-get">
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">9 структурованих уроків, зі словами та фразами котрі знадобляться тобі кожного дня</div>
-						</div>
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">Ти можеш вивчати будь-коли, коли матимеш бажання, адже доступ до уроків ти отримаєш аж на цілий рік</div>
-						</div>
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">До кожного уроку ти отримаєш аудіозапис нових слів та фраз, котрі зможеш будь-коли прослуховувати у свої навушниках</div>
-						</div>
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">Конспект до кожного уроку </div>
-						</div>
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">Практичні завдання після кожного пройденого матеріалу</div>
-						</div>
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">Коли у тебе виникнуть будь-які запитання, ти завжди зможеш попросити допомогу та роз'яснення у куратора</div>
-						</div>
-						<div class="card-get__wrapper">
-							<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
-							<div class="card-get__description">Навчання проходитиме на зручній для всіх платформі <b>Telegram</b></div>
+			<!-- <section class="page__will-get">
+					<div class="will-get__container">
+						<h2 class="will-get__title subtitle">Що я отримаю?</h2>
+						<div class="will-get__card-target card-get">
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">9 структурованих уроків, зі словами та фразами котрі знадобляться тобі кожного дня</div>
+							</div>
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">Ти можеш вивчати будь-коли, коли матимеш бажання, адже доступ до уроків ти отримаєш аж на цілий рік</div>
+							</div>
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">До кожного уроку ти отримаєш аудіозапис нових слів та фраз, котрі зможеш будь-коли прослуховувати у свої навушниках</div>
+							</div>
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">Конспект до кожного уроку </div>
+							</div>
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">Практичні завдання після кожного пройденого матеріалу</div>
+							</div>
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">Коли у тебе виникнуть будь-які запитання, ти завжди зможеш попросити допомогу та роз'яснення у куратора</div>
+							</div>
+							<div class="card-get__wrapper">
+								<img class="card-get__image ibg" src="img/image-cat.webp" alt="Image">
+								<div class="card-get__description">Навчання проходитиме на зручній для всіх платформі <b>Telegram</b></div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section> -->
 			<section class="page__about">
 				<div class="about__container">
-					<h2 class="about__title subtitle subtitle-white">Давайте знайомитись?</h2>
+					<h2 class="about__title subtitle ">Давайте знайомитись?</h2>
 					<div class="about__main-wrap">
 						<div class="about__wrapper-author author">
 							<img class="about__image ibg" src="img/image-cat.webp" alt="Image">
@@ -145,11 +135,6 @@
 							<div class="specificatin__menu">
 								<h4 class="specificatin__subtitle">Професійний досвід:</h4>
 								<ul class="specificatin__list">
-									<!-- <li class="specificatin__item">Закінчила Вроцлавський Університет Вищої Банківської Школи Меріто</li>
-										<li class="specificatin__item">Бакалавр факультет Управління, спеціальність Комп'ютерна графіка</li>
-										<li class="specificatin__item">4 роки досвіду в розмовній польській мові</li>
-										<li class="specificatin__item">2 роки досвіду у сфері управління в польських фірмах </li>
-										<li class="specificatin__item">8 місяців досвіду у сфері маркетингу</li> -->
 									<li class="specificatin__item">4 роки практики розмовної польської мови. Досконале володіння мовою в діловому та повсякденному контекстах.</li>
 									<li class="specificatin__item">2 роки досвіду у сфері управління в польських компаніях. Займалася управлінськими та організаційними процесами, що дозволило глибше зрозуміти польську бізнес-культуру.</li>
 									<li class="specificatin__item">8 місяців досвіду у сфері маркетингу. Працювала над розробкою та впровадженням маркетингових стратегій, що додатково розширило мої навички в комунікації та роботі з клієнтами.</li>
@@ -211,56 +196,56 @@
 							</div>
 						</div>
 					</section> -->
-			<section class="page__results">
-				<div class="results__container">
-					<div class="results__text">
-						<h2 class="results__title subtitle subtitle-white">Твої результати після курсу</h2>
+			<!-- <section class="page__results">
+					<div class="results__container">
+						<div class="results__text">
+							<h2 class="results__title subtitle subtitle-white">Твої результати після курсу</h2>
+						</div>
+						<div class="results__cards-wrapper card-result">
+							<div class="card-result__wrap">
+								<h4 class="card-result__number">1</h4>
+								<div class="card-result__description">
+									<p>Зникнення вічного страху, що ти нічого не знаєш та говориш не правильно</p>
+								</div>
+							</div>
+							<div class="card-result__wrap">
+								<h4 class="card-result__number">2</h4>
+								<div class="card-result__description">
+									<p>Ти не боятимешся розмови з лікарем, консультантом в магазині чи при будь-яких інших обставинах.</p>
+								</div>
+							</div>
+							<div class="card-result__wrap">
+								<h4 class="card-result__number">3</h4>
+								<div class="card-result__description">
+									<p>Ти знатимеш багато нових слів та фраз, котрі зможеш використати у повсякденному вжитку</p>
+								</div>
+							</div>
+							<div class="card-result__wrap">
+								<h4 class="card-result__number">4</h4>
+								<div class="card-result__description">
+									<p>Ти матимеш можливість в будь-який час повторити вивчений матеріал та підкріпити свої знання</p>
+								</div>
+							</div>
+							<div class="card-result__wrap">
+								<h4 class="card-result__number">5</h4>
+								<div class="card-result__description">
+									<p>Ти більше не почуватимеш дискомфорт у колі своїх польських друзів та колег</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="results__cards-wrapper card-result">
-						<div class="card-result__wrap">
-							<h4 class="card-result__number">1</h4>
-							<div class="card-result__description">
-								<p>Зникнення вічного страху, що ти нічого не знаєш та говориш не правильно</p>
-							</div>
-						</div>
-						<div class="card-result__wrap">
-							<h4 class="card-result__number">2</h4>
-							<div class="card-result__description">
-								<p>Ти не боятимешся розмови з лікарем, консультантом в магазині чи при будь-яких інших обставинах.</p>
-							</div>
-						</div>
-						<div class="card-result__wrap">
-							<h4 class="card-result__number">3</h4>
-							<div class="card-result__description">
-								<p>Ти знатимеш багато нових слів та фраз, котрі зможеш використати у повсякденному вжитку</p>
-							</div>
-						</div>
-						<div class="card-result__wrap">
-							<h4 class="card-result__number">4</h4>
-							<div class="card-result__description">
-								<p>Ти матимеш можливість в будь-який час повторити вивчений матеріал та підкріпити свої знання</p>
-							</div>
-						</div>
-						<div class="card-result__wrap">
-							<h4 class="card-result__number">5</h4>
-							<div class="card-result__description">
-								<p>Ти більше не почуватимеш дискомфорт у колі своїх польських друзів та колег</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+				</section> -->
 			<section class="page__questions">
 				<div class="questions__container">
 					<h2 class="questions__title subtitle">Відповіді на запитання</h2>
 					<div data-spollers class="spollers">
 						<details class="spollers__item">
 							<summary class="spollers__title">Чи підійде початківцям цей міні-курс?</summary>
-							<div class="spollers__body">Так, цей курс розрахований на початкові рівні знання польської, та навіть, якщо у Вас 0 рівень, Ви теж зможете швидко навчитися</div>
+							<div class="spollers__body">Так, цей курс розрахований на початкові рівні знання польської, та навіть, якщо у Вас 0 рівень, Ви теж зможете швидко навчитися.</div>
 						</details>
 						<details class="spollers__item">
 							<summary class="spollers__title">Чи зможу після цього міні-курсу спілкуватися зі своїми знайомими та колегами?</summary>
-							<div class="spollers__body">Так, звісно. У цьому курсі є всі базові слова та фрази для щоденного вжитку, котрі ви зможете вивчати в будь-який зручний для Вас час..</div>
+							<div class="spollers__body">Так, звісно. У цьому курсі є всі базові слова та фрази для щоденного вжитку, котрі ви зможете вивчати в будь-який зручний для Вас час.</div>
 						</details>
 						<details class="spollers__item">
 							<summary class="spollers__title">Як цей міні-курс вплине на моє мовлення?</summary>
@@ -272,19 +257,13 @@
 						</details>
 						<details class="spollers__item">
 							<summary class="spollers__title">На скільки часу дається доступ до курсу?</summary>
-							<div class="spollers__body">Цей курс розрахований на 10 днів, тобто кожного нового дня Вам відкриватиметься новий урок, та якщо попередній урок Ви пройшли раніше, то доступ до наступного уроку, ви можете отримати в той же день. Ви робитимете уроки та домашні завдання в своєму темпі та тоді, коли Вам буде зручно. </div>
-						</details>
-						<details class="spollers__item">
-							<summary class="spollers__title">На скільки часу дається доступ до курсу?</summary>
-							<div class="spollers__body">Ви отримуєте доступ до всіх матеріалів рівно на один рік з дня покупки.</div>
+							<div class="spollers__body"> </div>
 						</details>
 						<details class="spollers__item">
 							<summary class="spollers__title">Як буде відбуватись навчання на міні-курсі?</summary>
 							<div class="spollers__body">Всі відео-уроки будуть в записі, котрий ви можете переглядати в зручний для Вас час. До кожного уроку Ви отримуєте додаткові матеріали, конспекти, аудіо діалогів з уроків та аудіо нових слів та фраз.</div>
 						</details>
 					</div>
-					<h4 class="questions__subtitle">Якщо у Вас з'являтимуться додаткові запитання Ви можете попросити куратора про допомогу або ж написати своє питання в чаті-спілкування та отримати допомогу своїх одногрупників.</h4>
-					<h4 class="questions__return">Якщо ви не побачите результату - ми повернемо вам кошти!впродовж 14 днів від моменту покупки</h4>
 				</div>
 
 			</section>
@@ -313,7 +292,140 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241027123227"></script>
+	<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+	<div id="fls-preloader">
+		<!-- Скріпт прелоадера -->
+		<script>
+			function preloader() {
+				const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+				const preloaderContainer = document.querySelector('#fls-preloader');
+				if (preloaderImages.length) {
+					const preloaderStyleTemplate = `
+				<style>
+					* {
+						padding: 0px;
+						margin: 0px;
+						border: 0px;
+						box-sizing: border-box;
+					}
+					/* Головний блок */
+					.fls-preloader{
+						pointer-events: none;
+						z-index: -1;
+						position: fixed;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						display: flex;
+						justify-content:center;
+						align-items: center;
+					}
+					/* Блок з елементами */
+					.fls-preloader__body{
+						padding: 0.93rem;
+						max-width: 31.25rem;
+						display: flex;
+						flex-direction: column;
+					}
+					/* Блок з лічильником */
+					.fls-preloader__counter{
+						font-size: 10rem;
+					}
+					/* Прогресбар */
+					.fls-preloader__line{}
+					/* Лінія прогресбару */
+					.fls-preloader__line span{
+						display: inline-block;
+						transition: width 0.2s ease;
+						height: 0.8rem;
+						background-color: #7A956B;
+					}
+					.lock body{
+						overflow: hidden;
+						touch-action: none;
+						overscroll-behavior: none;
+					}
+					.loading body>*:not(.fls-preloader){
+						opacity: 0;
+						visibility: hidden;
+					}
+					.loaded body>*:not(.fls-preloader){
+						transition: opacity 0.5s ease 0s;
+						opacity: 1;
+						visibility: visible;
+					}
+				</style>`;
+
+					document.head.insertAdjacentHTML("beforeend", preloaderStyleTemplate);
+
+					const preloaderTemplate = `
+					<div class="fls-preloader">
+						
+						<div class="fls-preloader__body">
+							
+						</div>
+						
+					</div>`;
+					document.body.insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					const
+						preloader = document.querySelector('.fls-preloader'),
+						showPecentLoad = document.querySelector('.fls-preloader__counter'),
+						showLineLoad = document.querySelector('.fls-preloader__line span'),
+						htmlDocument = document.documentElement;
+
+					let imagesLoadedCount = counter = progress = 0;
+
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+
+					preloaderImages.forEach(preloaderImage => {
+						const imgClone = document.createElement('img');
+						if (imgClone) {
+							imgClone.onload = imageLoaded;
+							imgClone.onerror = imageLoaded;
+							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+						}
+					});
+
+					function setValueProgress(progress) {
+						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					showPecentLoad ? setValueProgress(progress) : null;
+
+					function imageLoaded() {
+						imagesLoadedCount++;
+						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+						const intervalId = setInterval(() => {
+							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+							counter >= 100 ? addLoadedClass() : null;
+						}, 50);
+					}
+
+					function addLoadedClass() {
+						htmlDocument.classList.add('loaded');
+						htmlDocument.classList.remove('lock');
+						htmlDocument.classList.remove('loading');
+						setInterval(() => {
+							preloader.remove();
+							preloaderContainer.remove();
+						}, 500);
+					}
+				} else {
+					preloaderContainer.remove();
+				}
+			}
+			preloader();
+		</script>
+	</div>
+	<!-- 
+	вставить в пременую preloaderTemplate
+	<div class="fls-preloader__counter">0%</div>
+	<div class="fls-preloader__line"><span></span></div> 
+-->
+	<script src="js/app.min.js?_v=20241031204020"></script>
 </body>
 
 </html>

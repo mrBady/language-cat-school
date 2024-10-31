@@ -1,12 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 :root {
   --primary: #060606;
-  --secondary: #b63820;
+  --secondary: #2d48a3;
   --bg-primary: #f7f8fa;
   --bg-secondary: #f6f0e4;
-  --bg-accent: #b63820;
-  --bg-hover: #962711;
-  --bg-main: #c1e2fe
+  --bg-accent: #2d48a3;
+  --bg-hover: #2d48a3;
+  --bg-main: #7a6dc7
 }
 * {
   padding: 0;
@@ -30,7 +30,7 @@ html {
 body {
   color: #060606;
   line-height: 1;
-  font-family: Merriweather,serif;
+  font-family: Montserrat,serif;
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -41,7 +41,7 @@ body {
 button,
 input,
 textarea {
-  font-family: Merriweather,serif;
+  font-family: Montserrat,serif;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
@@ -85,6 +85,9 @@ h6 {
   -ms-scroll-chaining: none;
   overscroll-behavior: none
 }
+.loaded body {
+  overflow: visible
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -121,14 +124,15 @@ h6 {
   gap: 15px
 }
 .spollers__item {
-  padding-bottom: .625rem;
+  font-weight: 600;
+  padding-bottom: .9375rem;
   border-bottom: 1px solid var(--bg-accent)
 }
 .spollers__title {
   width: 100%;
   cursor: default;
   text-align: left;
-  padding: .625rem 1.875rem .625rem .625rem;
+  padding: .625rem 2.5rem .625rem .625rem;
   border-radius: .3125rem;
   position: relative;
   list-style: none
@@ -147,7 +151,7 @@ h6 {
   right: 10px;
   top: 50%;
   background-color: var(--bg-accent);
-  height: 2px;
+  height: 3px;
   width: 15px;
   transition: -webkit-transform .1s ease 0s;
   transition: transform .1s ease 0s;
@@ -170,6 +174,7 @@ h6 {
   transform: rotate(40deg)
 }
 .spollers__body {
+  color: #000;
   padding: 1.25rem;
   border-radius: .3125rem
 }
@@ -200,7 +205,7 @@ h6 {
   object-fit: contain
 }
 .footer {
-  background: var(--bg-main)
+  background: #dae1ff
 }
 .footer__container {
   padding-top: 1.875rem;
@@ -233,7 +238,9 @@ h6 {
   max-width: 1.5625rem
 }
 .footer__political {
+  font-weight: 600;
   display: flex;
+  align-items: center;
   gap: 1.875rem
 }
 .footer__wrap {
@@ -252,20 +259,29 @@ h6 {
   text-align: center
 }
 .page__main-section {
-  background: var(--bg-secondary)
+  position: relative;
+  background: #dae1ff;
+  z-index: -2
+}
+.main-section__container {
+  padding-bottom: 6.25rem
 }
 .main-section__wrapper-content {
+  position: relative;
   display: flex;
   align-items: center;
   padding-top: 3.125rem;
   padding-bottom: 3.125rem
 }
 .start__wrapper {
+  position: relative;
   border-radius: .625rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  background-color: var(--bg-primary)
+  gap: 2.5rem;
+  background-color: #f1f1f1;
+  border: 1px solid #2d48a3;
+  padding: 3.125rem 3.125rem 4.375rem 3.125rem
 }
 .start__sub-title {
   display: flex;
@@ -284,8 +300,14 @@ h6 {
 }
 .start__title {
   line-height: 1.2;
-  color: var(--secondary);
+  color: #2d48a3;
   font-weight: 700
+}
+.start__subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d48a3;
+  margin-top: .3125rem
 }
 .start__list {
   display: flex;
@@ -295,9 +317,12 @@ h6 {
 .start__item {
   line-height: 1.2;
   margin-left: .9375rem;
-  font-size: .9375rem;
+  font-size: 1.125rem;
   list-style-type: disc;
-  font-weight: 300
+  font-weight: 500
+}
+.start__image {
+  border: .625rem
 }
 .card {
   display: flex;
@@ -321,96 +346,44 @@ h6 {
   gap: 1.875rem
 }
 .price__link-buy {
+  position: absolute;
+  width: 18.75rem;
+  height: 4.375rem;
+  top: 95%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3;
   color: #fff;
-  background-color: var(--bg-accent);
-  padding: 1.25rem 3.125rem;
+  background-color: #4764c4;
+  padding: 0 1.25rem;
   border-radius: 30px;
-  transition: all .3s
+  transition: all .3s;
+  -webkit-animation: shakeAndTilt 2s ease-in-out infinite;
+  animation: shakeAndTilt 2s ease-in-out infinite
 }
 @-webkit-keyframes shakeAndTilt {
-  0%,
-  100% {
-    -webkit-transform: translateX(0) rotate(0);
-    transform: translateX(0) rotate(0)
-  }
-  10% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
-  }
-  20% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
-  }
-  30% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
-  }
-  40% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
+  0% {
+    scale: 1
   }
   50% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
+    scale: 1.05
   }
-  60% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
-  }
-  70% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
-  }
-  80% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
-  }
-  90% {
-    -webkit-transform: translateX(-1px) rotate(-1deg);
-    transform: translateX(-1px) rotate(-1deg)
+  100% {
+    scale: 1
   }
 }
 @keyframes shakeAndTilt {
-  0%,
-  100% {
-    -webkit-transform: translateX(0) rotate(0);
-    transform: translateX(0) rotate(0)
-  }
-  10% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
-  }
-  20% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
-  }
-  30% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
-  }
-  40% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
+  0% {
+    scale: 1
   }
   50% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
+    scale: 1.05
   }
-  60% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
-  }
-  70% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg)
-  }
-  80% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg)
-  }
-  90% {
-    -webkit-transform: translateX(-1px) rotate(-1deg);
-    transform: translateX(-1px) rotate(-1deg)
+  100% {
+    scale: 1
   }
 }
 .price__wrapper-price {
@@ -418,21 +391,22 @@ h6 {
   flex-direction: column
 }
 .price__second {
+  font-weight: 600;
   text-align: center;
   padding-bottom: .3125rem;
   font-size: 1.375rem;
-  color: var(--secondary)
+  color: #fff
 }
 .price__main {
-  color: rgba(121,121,121,.4588235294);
   text-align: center
 }
 .page__target-audience {
-  background-color: var(--bg-accent);
+  background-color: #f1f1f1;
   padding-top: 3.125rem;
   padding-bottom: 3.125rem
 }
 .target-audience__container {
+  font-weight: 600;
   border-radius: .625rem;
   background-color: #fff;
   padding-top: 3.125rem;
@@ -469,7 +443,8 @@ h6 {
   width: 2.5rem
 }
 .card-target__description {
-  line-height: 1.2
+  line-height: 1.2;
+  font-size: 1.125rem
 }
 .will-get__container {
   padding-top: 3.125rem;
@@ -495,6 +470,7 @@ h6 {
   line-height: 1.2
 }
 .page__about {
+  background: #dae1ff;
   padding-top: 3.125rem;
   padding-bottom: 3.125rem
 }
@@ -534,16 +510,16 @@ h6 {
 }
 .about__specificatin {
   border-radius: .625rem;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   justify-content: center
 }
 .specificatin__menu {
-  padding-top: 1.25rem;
-  padding-left: .9375rem;
-  padding-right: .9375rem
+  padding-top: 1.875rem;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem
 }
 .specificatin__subtitle {
   font-size: 20px;
@@ -570,8 +546,8 @@ h6 {
   background: url(../img/ok.svg) center center/cover no-repeat
 }
 .specificatin__quote {
-  padding-left: .9375rem;
-  padding-right: .9375rem;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
   padding-bottom: 1.25rem;
   line-height: 1.2
 }
@@ -589,10 +565,11 @@ h6 {
 }
 .spollers__title {
   font-size: 1.125rem;
-  color: var(--secondary)
+  color: #000
 }
 .spollers__body {
-  font-size: .9375rem
+  font-weight: 400;
+  font-size: 1rem
 }
 .page__reviwes {
   background: var(--bg-secondary)
@@ -614,7 +591,7 @@ h6 {
   padding: 0 .9375rem
 }
 .page__results {
-  background: var(--secondary)
+  background: var(--bg-accent)
 }
 .results__container {
   padding-top: 3.125rem;
@@ -655,7 +632,7 @@ h6 {
   left: 50%;
   -webkit-transform: translateY(calc(6.25rem / -2)) translateX(-50%);
   transform: translateY(calc(6.25rem / -2)) translateX(-50%);
-  background: #c35c48;
+  background: #48c367;
   display: flex;
   justify-content: center;
   align-items: center
@@ -679,7 +656,7 @@ h6 {
   color: var(--bg-accent)
 }
 .questions__subtitle {
-  margin-top: 1.875rem;
+  margin-top: 3.75rem;
   color: var(--bg-accent)
 }
 .political__container {
@@ -694,7 +671,7 @@ h6 {
   margin-bottom: 1.875rem
 }
 .political__text {
-  font-size: .875rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   gap: .625rem;
@@ -1349,6 +1326,14 @@ button.swiper-pagination-bullet {
   .main-section__start {
     width: 50%
   }
+  .start__image {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 25%
+  }
   .price {
     padding-left: 3.125rem
   }
@@ -1360,9 +1345,6 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:75em) {
-  .start__wrapper {
-    padding: 3.125rem
-  }
   .start__title {
     font-size: 2.125rem
   }
@@ -1374,11 +1356,8 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:20em) {
-  .start__wrapper {
-    padding: 1.25rem
-  }
   .start__title {
-    font-size: 1.5625rem
+    font-size: 1.6875rem
   }
   .subtitle {
     font-size: 1.5rem
@@ -1396,10 +1375,7 @@ button.swiper-pagination-bullet {
   ._spoller-init .spollers__title::after,
   ._spoller-init .spollers__title::before {
     width: .625rem;
-    height: .0625rem
-  }
-  .spollers__title {
-    padding: .3125rem 1.875rem .3125rem .3125rem
+    height: .125rem
   }
   .footer__political {
     flex-direction: column;
@@ -1412,6 +1388,13 @@ button.swiper-pagination-bullet {
   }
   .start {
     width: 100%
+  }
+  .start__wrapper {
+    padding: 1.875rem 1.875rem 4.375rem 1.875rem;
+    gap: 1.25rem
+  }
+  .start__item {
+    font-size: 1rem
   }
   .price {
     gap: .9375rem;
@@ -1437,7 +1420,7 @@ button.swiper-pagination-bullet {
     width: 2.1875rem
   }
   .card-target__description {
-    font-size: .9375rem
+    font-size: 1rem
   }
   .card-get__wrapper {
     gap: 1.25rem
@@ -1465,18 +1448,15 @@ button.swiper-pagination-bullet {
     font-size: 1.25rem
   }
   .card-result__description {
-    padding: 2.1875rem .9375rem 1.25rem;
+    padding: 2.8125rem .9375rem 1.875rem;
     font-size: 1rem;
     line-height: 1.3;
     font-weight: 600
   }
 }
 @media (min-width:20em)and (max-width:75em) {
-  .start__wrapper {
-    padding: clamp(1.25rem ,.5681818182rem + 3.4090909091vw ,3.125rem)
-  }
   .start__title {
-    font-size: clamp(1.5625rem ,1.3579545455rem + 1.0227272727vw ,2.125rem)
+    font-size: clamp(1.6875rem ,1.5284090909rem + .7954545455vw ,2.125rem)
   }
   .subtitle {
     font-size: clamp(1.5rem ,1.2727272727rem + 1.1363636364vw ,2.125rem)
@@ -1487,7 +1467,7 @@ button.swiper-pagination-bullet {
 }
 @media (any-hover:hover) {
   .price__link-buy:hover {
-    background-color: var(--bg-hover);
+    background-color: #2d48a3;
     -webkit-animation: none;
     animation: none
   }
