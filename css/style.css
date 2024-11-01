@@ -1,13 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-:root {
-  --primary: #060606;
-  --secondary: #2d48a3;
-  --bg-primary: #f7f8fa;
-  --bg-secondary: #f6f0e4;
-  --bg-accent: #2d48a3;
-  --bg-hover: #2d48a3;
-  --bg-main: #7a6dc7
-}
 * {
   padding: 0;
   margin: 0;
@@ -176,7 +167,8 @@ h6 {
 .spollers__body {
   padding: 1.25rem;
   border-radius: .3125rem;
-  font-weight: 400
+  font-weight: 400;
+  line-height: 1.3
 }
 .ibg {
   width: 100%;
@@ -273,6 +265,7 @@ h6 {
   padding-bottom: 3.125rem
 }
 .start__wrapper {
+  margin-top: 1.875rem;
   position: relative;
   z-index: 2;
   border-radius: .625rem;
@@ -281,7 +274,10 @@ h6 {
   gap: 2.5rem;
   background-color: #f1f1f1;
   border: 1px solid #2d48a3;
-  padding: 2.5rem 2.5rem 4.375rem 2.5rem
+  padding: 2.1875rem 2.1875rem 3.75rem 2.1875rem
+}
+.start__title-wrap {
+  margin-top: 1.875rem
 }
 .start__sub-title {
   display: flex;
@@ -365,6 +361,7 @@ h6 {
   padding-bottom: 3.125rem
 }
 .target-audience__container {
+  border: 1px solid #2d48a3;
   font-weight: 600;
   border-radius: .625rem;
   background-color: #fff;
@@ -426,6 +423,7 @@ h6 {
   border-radius: .625rem
 }
 .author__wrap {
+  border: 1px solid #2d48a3;
   position: absolute;
   width: 78%;
   height: 5rem;
@@ -438,7 +436,8 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly
+  justify-content: center;
+  gap: .3125rem
 }
 .author__name {
   font-size: 1.375rem;
@@ -446,6 +445,7 @@ h6 {
   font-weight: 600
 }
 .about__specificatin {
+  border: 1px solid #2d48a3;
   border-radius: .625rem;
   background: #f1f1f1;
   display: flex;
@@ -1178,7 +1178,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:47.99875em) {
   .main-section__start {
-    width: 50%
+    width: 55%
   }
   .start__image {
     z-index: 1;
