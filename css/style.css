@@ -262,7 +262,12 @@ h6 {
   display: flex;
   align-items: center;
   padding-top: 3.125rem;
-  padding-bottom: 3.125rem
+  gap: 1.875rem
+}
+.main-section__image {
+  border-radius: .625rem;
+  display: block;
+  margin: 0 auto
 }
 .start__wrapper {
   margin-top: 1.875rem;
@@ -313,12 +318,18 @@ h6 {
 .start__link-buy {
   position: absolute;
   z-index: 10;
-  width: 18.75rem;
-  min-height: 4.375rem;
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: pulse 1.5s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite
+}
+.button-buy {
+  width: 18.75rem;
+  min-height: 4.375rem;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.3;
@@ -327,10 +338,6 @@ h6 {
   padding: .625rem 2.5rem;
   border-radius: 30px;
   transition: all .3s;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: pulse 1.5s ease-in-out infinite;
-  animation: pulse 1.5s ease-in-out infinite;
   box-shadow: 0 4px 0 #2d48a3,0 0 15px rgba(71,100,196,.3),0 0 30px rgba(71,100,196,.3)
 }
 @-webkit-keyframes pulse {
@@ -360,13 +367,21 @@ h6 {
   padding-top: 3.125rem;
   padding-bottom: 3.125rem
 }
-.target-audience__container {
+.target-audience__main-wrap {
   border: 1px solid #2d48a3;
   font-weight: 600;
   border-radius: .625rem;
   background-color: #fff;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem
+  padding: 3.125rem .9375rem
+}
+.target-audience__wrapper-main {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+  justify-content: center
+}
+.target-audience__image-wrap {
+  max-width: 15.625rem
 }
 .subtitle {
   text-align: center;
@@ -536,6 +551,39 @@ h6 {
   font-size: 1.25rem;
   margin-bottom: .9375rem;
   margin-top: 1.5625rem
+}
+.page-fall__container {
+  display: flex;
+  justify-content: center
+}
+.page-fall__wrapper {
+  margin-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 31.25rem;
+  gap: 1.25rem;
+  border-radius: .625rem;
+  background-color: #f1f1f1;
+  border: 1px solid #2d48a3;
+  padding: 2.1875rem 2.1875rem 3.75rem 2.1875rem
+}
+.page-fall__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3125rem
+}
+.page-fall__title {
+  line-height: 1.2;
+  color: #2d48a3;
+  font-weight: 700
+}
+.page-fall__sub-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d48a3
 }
 .swiper {
   overflow: hidden
@@ -1180,6 +1228,9 @@ button.swiper-pagination-bullet {
   .main-section__start {
     width: 55%
   }
+  .main-section__image {
+    max-width: 30%
+  }
   .start__image {
     z-index: 1;
     position: absolute;
@@ -1202,6 +1253,9 @@ button.swiper-pagination-bullet {
   .questions__subtitle {
     font-size: 1.375rem
   }
+  .page-fall__title {
+    font-size: 2.125rem
+  }
 }
 @media (max-width:20em) {
   .start__title {
@@ -1212,6 +1266,9 @@ button.swiper-pagination-bullet {
   }
   .questions__subtitle {
     font-size: 1.125rem
+  }
+  .page-fall__title {
+    font-size: 1.5rem
   }
 }
 @media (max-width:61.99875em) {
@@ -1237,7 +1294,7 @@ button.swiper-pagination-bullet {
   .main-section__wrapper-content {
     flex-direction: column;
     align-items: start;
-    gap: 1.875rem
+    gap: 3.125rem
   }
   .start {
     width: 100%
@@ -1249,9 +1306,11 @@ button.swiper-pagination-bullet {
   .start__item {
     font-size: 1rem
   }
-  .target-audience__container {
-    padding-top: 1.875rem;
-    padding-bottom: 1.875rem
+  .target-audience__main-wrap {
+    padding: 1.875rem .9375rem
+  }
+  .target-audience__wrapper-main {
+    flex-direction: column-reverse
   }
   .subtitle {
     padding-bottom: 1.5625rem
@@ -1272,6 +1331,15 @@ button.swiper-pagination-bullet {
   .specificatin__quote {
     font-size: 1rem
   }
+  .page-fall__wrapper {
+    padding: 1.4375rem 1.4375rem 2.5rem 1.4375rem;
+    gap: 1.25rem
+  }
+}
+@media (max-width:29.99875em) {
+  .button-buy {
+    max-width: 16.25rem
+  }
 }
 @media (min-width:20em)and (max-width:75em) {
   .start__title {
@@ -1283,9 +1351,12 @@ button.swiper-pagination-bullet {
   .questions__subtitle {
     font-size: clamp(1.125rem ,1.0340909091rem + .4545454545vw ,1.375rem)
   }
+  .page-fall__title {
+    font-size: clamp(1.5rem ,1.2727272727rem + 1.1363636364vw ,2.125rem)
+  }
 }
 @media (any-hover:hover)and (any-hover:hover) {
-  .start__link-buy:hover {
+  .button-buy:hover {
     background: linear-gradient(47deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 70%),#5a78d1;
     box-shadow: 0 6px 0 #3b55a1,0 0 25px rgba(90,120,209,.5),0 0 50px rgba(90,120,209,.5),0 0 75px rgba(90,120,209,.5)
   }
